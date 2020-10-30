@@ -1,10 +1,10 @@
 public class Tester {
   public static void main(String[] args) {
-    double[] points = new double[6];
+    double[] coords = new double[6];
     for (int i = 0; i < 6; i ++) {
-      points[i] = Double.parseDouble(args[i]);
+      coords[i] = Double.parseDouble(args[i]);
     }
-    Triangle bob = new Triangle(points[0], points[1], points[2], points[3], points[4], points[5]);
+    Triangle bob = new Triangle(coords[0], coords[1], coords[2], coords[3], coords[4], coords[5]);
     System.out.println("Perimiter:");
     System.out.println(bob.getPerimeter());
     System.out.println("Area:");
