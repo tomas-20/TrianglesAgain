@@ -1,16 +1,13 @@
 public class Tester {
   public static void main(String[] args) {
-    Point fakeBob = new Point(1, 2);
-    Point bob = new Point(fakeBob);
-    System.out.println(bob.getX());
-    System.out.println(bob.getY());
-    Point joe = new Point(5, 5);
-    System.out.println(bob.distanceTo(joe));
-    System.out.println(bob.equals(joe));
-    Point dylan = new Point(8, 9);
-    Triangle pythagoras = new Triangle(bob, dylan, joe);
-    Triangle euclid = new Triangle(2, 1, 8, 7, 4, 2);
-    System.out.println(euclid.getPerimeter());
-    System.out.println(euclid.getArea());
+    double[] points = new double[6];
+    for (int i = 0; i < 6; i ++) {
+      points[i] = Double.parseDouble(args[i]);
+    }
+    Triangle bob = new Triangle(points[0], points[1], points[2], points[3], points[4], points[5]);
+    System.out.println("Perimiter:");
+    System.out.println(bob.getPerimeter());
+    System.out.println("Area:");
+    System.out.println(bob.getArea());
   }
 }
