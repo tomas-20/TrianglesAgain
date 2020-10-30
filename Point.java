@@ -14,4 +14,13 @@ public class Point {
   public double getY() {
     return y;
   }
+  private double square(double n) {
+    return n * n;
+  }
+  public double distanceTo(Point other) {
+    return Math.pow(square(x - other.x) + square(y - other.y), 0.5);
+  }
+  public boolean equals(Point other) {
+    return x == other.x && y == other.y;
+  }
 }
