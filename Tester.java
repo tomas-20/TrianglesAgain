@@ -5,6 +5,8 @@ public class Tester {
       coords[i] = Double.parseDouble(args[i]);
     }
     Triangle bob = new Triangle(coords[0], coords[1], coords[2], coords[3], coords[4], coords[5]);
+    System.out.println("Triangle:");
+    System.out.println(bob.toString());
     System.out.println("Perimiter:");
     System.out.println(bob.getPerimeter());
     System.out.println("Area:");
