@@ -13,5 +13,8 @@ public class Tester {
     System.out.println(bob.getArea());
     System.out.println("Type:");
     System.out.println(bob.classify());
+    bob.setVertex(2, new Point(21, 87));
+    System.out.println("Triangle but now the last point is different:");
+    System.out.println(bob.toString());
   }
 }
