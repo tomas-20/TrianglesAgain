@@ -9,5 +9,7 @@ public class Tester {
     System.out.println(bob.getPerimeter());
     System.out.println("Area:");
     System.out.println(bob.getArea());
+    System.out.println("Type:");
+    System.out.println(bob.classify());
   }
 }

@@ -24,4 +24,25 @@ public class Triangle {
     double s = sum(sides) / 2;
     return Math.pow(s * (s - sides[0]) * (s - sides[1]) * (s - sides[2]), 0.5);
   }
+  private int boolToInt(boolean b) {
+    if (b) {
+      return 1;
+    }
+    else {
+      return 0;
+    }
+  }
+  public String classify() {
+    double[] sides = getSides();
+    int sames = boolToInt(sides[0] == sides[1]) + boolToInt(sides[1] == sides[2]) + boolToInt(sides[2] == sides[0]);
+    if (sames == 3) {
+      return "equilateral";
+    }
+    else if (sames == 1) {
+      return "isosceles";
+    }
+    else {
+      return "scalene";
+    }
+  }
 }
